@@ -27,7 +27,11 @@ function App() {
         />
       )}
       {gameState === availGameStates.finished && (
-        <FinishedScreen score={score} setGameState={setGameState} />
+        <FinishedScreen
+          score={score}
+          setScore={setScore}
+          setGameState={setGameState}
+        />
       )}
     </>
   );

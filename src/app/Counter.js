@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function Counter() {
-  const [count, setCount] = useState(20);
+  const [count, setCount] = useState(15);
 
   useInterval(() => {
     // Your custom logic here

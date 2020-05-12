@@ -18,7 +18,7 @@ const welcomScreenStyle = {
   }
 };
 
-function FinishedScreen({ score, setGameState }) {
+function FinishedScreen({ setScore, score, setGameState }) {
   return (
     <div style={welcomScreenStyle.container}>
       <div style={welcomScreenStyle.textContainer}>
@@ -26,7 +26,10 @@ function FinishedScreen({ score, setGameState }) {
         <p>Your score: {score}</p>
       </div>
       <button
-        onClick={() => setGameState("playing")}
+        onClick={() => {
+          setScore(0);
+          setGameState("playing");
+        }}
         type="button"
         className="nes-btn is-error"
       >
