@@ -17,8 +17,10 @@ const tileStyle = {
   character: {
     background: "url('character.png') 5rem 0rem",
     height: "1rem",
-    width: "1rem"
+    width: "1rem",
+    transform: "scale(1.3)"
   },
+  treasure: { transform: "scale(1.3)" },
   blackTile: score => ({
     display: "flex",
     justifyContent: "center",
@@ -89,6 +91,7 @@ function BoardTile({ score, position, path, isBlackTile, currentPosition }) {
         {position === finish && (
           <img
             alt="treasure chest"
+            style={tileStyle.treasure}
             src={`chest${position === currentPosition ? "_open" : ""}.png`}
           />
         )}
